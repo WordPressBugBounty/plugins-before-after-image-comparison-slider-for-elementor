@@ -332,6 +332,4 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		</style>
 <?php
 	}
-
-	protected function _content_template() {}
 }

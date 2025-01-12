@@ -5,14 +5,14 @@
  * Author: Plugin Devs
  * Author URI: https://plugin-devs.com/
  * Plugin URI: https://plugin-devs.com/product/before-after-slider-for-elementor/
- * Version: 1.6.4
+ * Version: 1.6.5
  * License: GPLv2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Domain Path: languages
  * Text Domain: before-after-image-comparison-slider-for-elementor
  * 
- * Elementor tested up to: 3.25.4
- * Elementor Pro tested up to: 3.25.2
+ * Elementor tested up to: 3.26.4
+ * Elementor Pro tested up to: 3.26.3
  */
 
 define( 'WB_EBAIC_PATH', plugin_dir_path( __FILE__ ) );

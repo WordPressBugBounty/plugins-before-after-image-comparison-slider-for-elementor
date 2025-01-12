@@ -205,10 +205,10 @@ final class WB_Elementor_BAIC_Main {
 	 *
 	 * @access public
 	 */
-	public function register_widgets() {
+	public function register_widgets( $controls_manager ) {
 
 		$this->includes();
-		$this->register_slider_widgets();
+		$this->register_slider_widgets( $controls_manager );
 	}
 
 	/**
@@ -360,9 +360,9 @@ final class WB_Elementor_BAIC_Main {
 	 */
 	public function enqueue_scripts(){
 
-		wp_enqueue_script( 'wb-elementor-before-after-slider-event-move', WB_EBAIC_URL . 'assets/js/jquery.event.move.js', array( 'jquery' ), '1.0.0', true );
-		wp_enqueue_script( 'wb-elementor-before-after-slider-library', WB_EBAIC_URL . 'assets/js/jquery.twentytwenty.js', array( 'jquery' ), '1.0.0', true );
-		wp_enqueue_script( 'wb-elementor-before-after-slider-main', WB_EBAIC_URL . 'assets/js/main.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'wb-elementor-before-after-slider-event-move', WB_EBAIC_URL . 'assets/js/jquery.event.move.js', array( 'jquery' ), '1.6.5', true );
+		wp_enqueue_script( 'wb-elementor-before-after-slider-library', WB_EBAIC_URL . 'assets/js/jquery.twentytwenty.js', array( 'jquery' ), '1.6.5', true );
+		wp_enqueue_script( 'wb-elementor-before-after-slider-main', WB_EBAIC_URL . 'assets/js/main.js', array( 'jquery' ), '1.6.5', true );
 	}
 
 	/**
@@ -389,8 +389,8 @@ final class WB_Elementor_BAIC_Main {
 	 *
 	 * @access public
 	 */
-	public function register_slider_widgets() {
-		\Elementor\Plugin::instance()->widgets_manager->register( new Before_After_Slider\WB_Elementor_Before_After() );
+	public function register_slider_widgets( $controls_manager ) {
+		$controls_manager->register( new Before_After_Slider\WB_Elementor_Before_After() );
 	}
 
 }
