@@ -41,6 +41,7 @@ $suffix = defined('wbebaic_SCRIPT_DEBUG') && wbebaic_SCRIPT_DEBUG ? '' : '.min';
                             <span class="wp_addon_notinstalled">Not Installed</span>
                             <p>Display Your Before After Works as Slideshow with image Navigation</p>
                             <a class="button button-secondary" href="https://plugin-devs.com/product/gallery-slider-for-elementor-before-after-slider/" target="_blank" ><?php echo esc_html__('Get It Now', 'wbebaic_addon'); ?></a>
+                            <a class="button button-primary" href="https://demo.plugin-devs.com/elementor-demo/before-after-slider-gallery/" target="_blank" ><?php echo esc_html__('See Demo', 'wbebaic_addon'); ?></a>
                         </div>            
                     </div>
                 </div>
@@ -63,6 +64,7 @@ $suffix = defined('wbebaic_SCRIPT_DEBUG') && wbebaic_SCRIPT_DEBUG ? '' : '.min';
                             <span class="wp_addon_notinstalled">Not Installed</span>
                             <p>Display your Before After Works as Carousel Slider</p>
                             <a class="button button-secondary" href="https://plugin-devs.com/product/carousel-slider-for-elementor-before-after-slider/" target="_blank" ><?php echo esc_html__('Get It Now', 'wbebaic_addon'); ?></a>
+                            <a class="button button-primary" href="https://demo.plugin-devs.com/elementor-demo/carousel-slider-for-elementor-before-after-slider/" target="_blank" ><?php echo esc_html__('See Demo', 'wbebaic_addon'); ?></a>
                         </div>            
                     </div>
                 </div>

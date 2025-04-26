@@ -317,8 +317,8 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		//print_r($settings);
 ?>
 		<div class="wb_ebais_twentytwenty_container twentytwenty-container" id="wb_before_after_<?php echo esc_attr($element_id); ?>">
-			<span class='before_text'><?php echo __('Before', 'before-after-image-comparison-slider-for-elementor'); ?></span>
-			<span class='after_text'><?php echo __('After', 'before-after-image-comparison-slider-for-elementor'); ?></span>
+			<span class='before_text'><?php echo esc_html__('Before', 'before-after-image-comparison-slider-for-elementor'); ?></span>
+			<span class='after_text'><?php echo esc_html__('After', 'before-after-image-comparison-slider-for-elementor'); ?></span>
 <?php
 			echo \Elementor\Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'before_image' );
 			echo \Elementor\Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'after_image' );
