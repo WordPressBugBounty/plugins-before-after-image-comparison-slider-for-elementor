@@ -361,6 +361,9 @@ if( ! class_exists( 'Wp_ebaic_Usage_Feedback') ) {
 		 * @since 1.0.0
 		 */
 		public function goodbye_form_callback() {
+			if ( ! current_user_can( 'manage_options' ) ) {
+				wp_send_json_error( 'Forbidden', 403 );
+			}
 			check_ajax_referer( 'wpbot_goodbye_form', 'security' );
 			if( isset( $_POST['values'] ) ) {
 				$values = json_encode( wp_unslash( $_POST['values'] ) );

@@ -2,8 +2,8 @@
 Contributors: plugindevs
 Tags: elementor before after slider, elementor before after image comparison slider, before after slider, before after image slider, before after image comparison slider
 Requires at least: 5.0 or higher
-Tested up to: 6.8
-Stable tag: 1.7.0
+Tested up to: 7.0
+Stable tag: 1.8.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -98,6 +98,12 @@ This section describes how to install the plugin and get it working.
 2. Slider
 
 == Changelog ==
+
+= 1.8.0 (07-02-26) =
+# Fixed security vulnerabilities (added capability and nonce checks to AJAX endpoints)
+# Fixed PHP 8.x compatibility issue with custom CSS validation
+# Cleaned up incorrect copy-paste text domains in the widget
+# Updated WordPress and Elementor compatibility
 
 = 1.7.0 (04-26-25) =
 # Escape Before and After texts to Enhance Security

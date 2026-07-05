@@ -39,7 +39,7 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html( 'Before After Image Comparison Slider', 'elementor-before-after-image-slider' );
+		return esc_html( 'Before After Image Comparison Slider', 'before-after-image-comparison-slider-for-elementor' );
 	}
 
 	/**
@@ -82,7 +82,7 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'section_name',
 			[
-				'label' => esc_html( 'Before After Slider', 'elementor-before-after-image-slider' ),
+				'label' => esc_html( 'Before After Slider', 'before-after-image-comparison-slider-for-elementor' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -90,7 +90,7 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		$this->add_control(
 			'before_image',
 			[
-				'label' => esc_html( 'Before Image', 'elementor-before-after-image-slider' ),
+				'label' => esc_html( 'Before Image', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -101,7 +101,7 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		$this->add_control(
 			'after_image',
 			[
-				'label' => esc_html( 'After Image', 'elementor-before-after-image-slider' ),
+				'label' => esc_html( 'After Image', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -120,77 +120,77 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		$this->add_control(
 			'more_feature_two',
 			[
-				'label' => esc_html__( 'Orientation:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'Orientation:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
 				// 'description' => 'Choose Horizontal or Vertical Orientation of the Slider. Default is Horizontal. <a href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank">Upgrade to Pro</a> to use the <strong>Vertical</strong> Orientation.',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'more_feature_three',
 			[
-				'label' => esc_html__( 'Click to Move:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'Click to Move:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
 				// 'description' => 'Click anywhere on the slider to move the comparison handle.  <a href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank">Upgrade to Pro</a> to use this',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'more_feature_4',
 			[
-				'label' => esc_html__( 'Move on Hover:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'Move on Hover:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
 				// 'description' => 'Move the handle on mouse hover instead of Drag the handler <a href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank">Upgrade to Pro</a> to use this',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'more_feature_five',
 			[
-				'label' => esc_html__( 'Default Offset:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'Default Offset:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
 				// 'description' => 'Move the handle on mouse hover instead of Drag the handler <a href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank">Upgrade to Pro</a> to use this',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'more_feature_six',
 			[
-				'label' => esc_html__( 'Overlay on Mouse Hover:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'Overlay on Mouse Hover:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
 				// 'description' => 'Move the handle on mouse hover instead of Drag the handler <a href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank">Upgrade to Pro</a> to use this',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'more_feature_one',
 			[
-				'label' => esc_html__( 'Need More Options:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'Need More Options:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
@@ -199,7 +199,7 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'before_text_configuration',
 			[
-				'label' => esc_html( 'Before Label', 'news-ticker-for-elementor' ),
+				'label' => esc_html( 'Before Label', 'before-after-image-comparison-slider-for-elementor' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -207,36 +207,36 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		$this->add_control(
 			'more_feature_seven',
 			[
-				'label' => esc_html__( 'Before Text:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'Before Text:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'more_feature_eight',
 			[
-				'label' => esc_html__( 'Before Text Color:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'Before Text Color:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'more_feature_nine',
 			[
-				'label' => esc_html__( 'Before Text Background:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'Before Text Background:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 		
@@ -245,7 +245,7 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'after_text_configuration',
 			[
-				'label' => esc_html( 'After Label', 'news-ticker-for-elementor' ),
+				'label' => esc_html( 'After Label', 'before-after-image-comparison-slider-for-elementor' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -253,36 +253,36 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		$this->add_control(
 			'more_feature_10',
 			[
-				'label' => esc_html__( 'After Text:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'After Text:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'more_feature_11',
 			[
-				'label' => esc_html__( 'After Text Color:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'After Text Color:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'more_feature_12',
 			[
-				'label' => esc_html__( 'After Text Background:', 'news-ticker-for-elementor' ),
+				'label' => esc_html__( 'After Text Background:', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => false,
 				'button_type' => 'danger',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 
@@ -291,7 +291,7 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => esc_html( 'Customize Style', 'news-ticker-for-elementor' ),
+				'label' => esc_html( 'Customize Style', 'before-after-image-comparison-slider-for-elementor' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -299,12 +299,12 @@ class WB_Elementor_Before_After extends \Elementor\Widget_Base
 		$this->add_control(
 			'more_feature_four',
 			[
-				'label' => __( 'You can <a style=" font-size: 12px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >customize the slider styles</a> fully with the <a style=" font-size: 12px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Pro Version</a>', 'news-ticker-for-elementor' ),
+				'label' => __( 'You can <a style=" font-size: 12px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >customize the slider styles</a> fully with the <a style=" font-size: 12px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Pro Version</a>', 'before-after-image-comparison-slider-for-elementor' ),
 				'type' => \Elementor\Controls_Manager::BUTTON,
 				'separator' => 'before',
 				'label_block' => true,
 				'button_type' => 'danger',
-				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'plugin-domain' ),
+				'text' => __( '<a style="color: #fff; font-size: 12px; padding: 0 10px; height: 100%; display: block; line-height: 28px;" href="https://plugin-devs.com/product/before-after-slider-for-elementor/" target="_blank" >Buy Pro</a>', 'before-after-image-comparison-slider-for-elementor' ),
 			]
 		);
 

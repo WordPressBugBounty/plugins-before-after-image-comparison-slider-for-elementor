@@ -1,4 +1,4 @@
-﻿jQuery(document).ready(function($){
+jQuery(document).ready(function($){
 
   $(document).on("click","#wbebaicpg-query-submit-btn", function(event){
      
@@ -40,6 +40,7 @@
 			'post_subject': subject,
 			'post_message': message,
 			'post_plugin_name': plugin_name,
+			'security': wbebaic_ajax_obj.nonce,
 		};
 
 		jQuery.post(ajaxurl, data, function(response) {

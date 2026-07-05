@@ -22,7 +22,7 @@ final class WB_Elementor_BAIC_Main {
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.6.0';
+	const VERSION = '1.8.0';
 
 	/**
 	 * Minimum Elementor Version
@@ -180,21 +180,24 @@ final class WB_Elementor_BAIC_Main {
 
 	public function wb_ebaic_review_transient()
 	{
-		if ( is_admin() ) {
-			$wb_ebaic_review_transient = get_transient('wb_ebaic_review_transient');
-			$wb_ebaic_review_option = get_option('wb_ebaic_review_transient');
-			if( $wb_ebaic_review_transient  != 'reviewed' ){
-				if( set_transient('wb_ebaic_review_transient', 'reviewed', 1*YEAR_IN_SECONDS ) ){
-					echo 'already_reviewed';
-				}
-			}
-			if( $wb_ebaic_review_option  != 'reviewed' ){
-				if( add_option('wb_ebaic_review_transient', 'reviewed' ) ){
-					echo 'already_reviewed';
-				}
-			}
-			wp_die();
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Forbidden', 403 );
 		}
+		check_ajax_referer( 'wb_ebaic_review_nonce', 'nonce' );
+
+		$wb_ebaic_review_transient = get_transient('wb_ebaic_review_transient');
+		$wb_ebaic_review_option = get_option('wb_ebaic_review_transient');
+		if( $wb_ebaic_review_transient  != 'reviewed' ){
+			if( set_transient('wb_ebaic_review_transient', 'reviewed', 1*YEAR_IN_SECONDS ) ){
+				echo 'already_reviewed';
+			}
+		}
+		if( $wb_ebaic_review_option  != 'reviewed' ){
+			if( add_option('wb_ebaic_review_transient', 'reviewed' ) ){
+				echo 'already_reviewed';
+			}
+		}
+		wp_die();
 	}
 	/**
 	 * Register Widget
@@ -345,6 +348,7 @@ final class WB_Elementor_BAIC_Main {
 		wp_localize_script( 'wb-elementor-admin-script', 'wb_ebaic_ajax_object',
             array(
             	'ajax_url' => admin_url( 'admin-ajax.php' ),
+            	'nonce'    => wp_create_nonce( 'wb_ebaic_review_nonce' ),
             ) 
         );
 	}

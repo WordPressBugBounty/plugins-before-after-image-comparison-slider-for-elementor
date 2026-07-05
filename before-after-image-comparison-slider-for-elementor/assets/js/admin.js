@@ -7,6 +7,7 @@ jQuery(document).ready(function(){
 			url: wb_ebaic_ajax_object.ajax_url,
 			data: {
 				action: 'wb_ebaic_review_transient',
+				nonce: wb_ebaic_ajax_object.nonce,
 			},
 			success: function( result ){
 				jQuery(_this).parents('.notice').slideUp();

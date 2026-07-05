@@ -123,8 +123,13 @@ function register_custom_css_setting() {
 }
 
 function wbebaic_custom_css_validation( $input ) {
-    if ( ! empty( $input['wbebaic_custom_css'] ) )
-        $input['wbebaic_custom_css'] = trim( $input['wbebaic_custom_css'] );
+    if ( is_array( $input ) ) {
+        if ( ! empty( $input['wbebaic_custom_css'] ) ) {
+            $input['wbebaic_custom_css'] = trim( $input['wbebaic_custom_css'] );
+        }
+    } else {
+        $input = trim( $input );
+    }
     return $input;
 }
 

@@ -27,6 +27,10 @@ if( !function_exists('process_wbebaic_promo_form') )
 {
 	function process_wbebaic_promo_form()
 	{
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Forbidden', 403 );
+		}
+		check_ajax_referer( 'wbebaic_promo_form_nonce', 'security' );
 		
 		$data['status'] = 'failed';
 		$data['message'] = __('Problem in processing your form submission request! Apologies for the inconveniences.<br> 
@@ -152,6 +156,9 @@ if( !class_exists('WBSupportPage') ){
 			   wp_enqueue_script( 'jquery-ui-core');
 			   wp_enqueue_script( 'jquery-ui-tabs' );
 			   wp_enqueue_script( 'jquery-custom-form-processor', $this->relative_folder_url . '/js/support-form-script.js',  array('jquery', 'jquery-ui-core','jquery-ui-tabs') );
+			   wp_localize_script( 'jquery-custom-form-processor', 'wbebaic_ajax_obj', array(
+				   'nonce' => wp_create_nonce( 'wbebaic_promo_form_nonce' )
+			   ));
 
 			   wp_enqueue_style('wl_support_font', "https://fonts.googleapis.com/css?family=Lato");
 			   wp_enqueue_style('wl_font_awesome', $this->relative_folder_url. "/css/font-awesome.min.css");
